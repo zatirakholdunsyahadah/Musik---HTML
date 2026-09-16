@@ -1,0 +1,717 @@
+/* =========================
+   UMUM
+   ========================= */
+
+body {
+    margin: 0;                                      /* menghilangkan jarak bawaan */
+    background-color: black;                        /* warna background */
+    color: white;                                   /* warna teks */
+    font-family: Arial, sans-serif;                 /* jenis huruf */
+}
+
+header {
+    display: flex;                                  /* isi header dibuat satu baris */
+    justify-content: space-between;                 /* logo kiri, menu kanan */
+    align-items: center;                            /* isi sejajar di tengah */
+    background-color: rgb(19, 16, 16);              /* warna background */
+    padding: 0 20px;                                /* jarak bagian dalam */
+    position: sticky;                               /* header tetap saat scroll */
+    top: 0;                                         /* menempel di bagian atas */
+    z-index: 2;                                     /* mengatur posisi layer */
+    border: 1px solid black;                        /* garis tepi */
+}
+
+header h1 {
+    padding: 0 50px;                                /* jarak kiri dan kanan */
+    color: green;                                   /* warna ZATIFY */
+    font-size: 40px;                                /* ukuran teks */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header h1 span {
+    color: white;                                   /* warna bagian ZATI */
+}
+
+nav a {
+    text-decoration: none;                          /* menghilangkan garis bawah */
+    color: white;                                   /* warna link */
+    margin: 15px;                                   /* jarak antar link */
+    font-size: large;                               /* ukuran teks */
+}
+
+nav a:hover {
+    color: rgb(71, 202, 38);                        /* warna saat cursor diarahkan */
+}
+
+section {
+    padding: 20px 90px;                             /* jarak dalam section */
+    color: white;                                   /* warna teks */
+}
+
+section h2 {
+    font-size: 50px;                                /* ukuran judul */
+    margin-bottom: 5px;                             /* jarak bawah */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
+}
+
+section h2 span {
+    color: green;                                   /* warna sebagian judul */
+}
+
+.text {
+    font-size: 20px;                                /* ukuran teks */
+    margin-top: 0;                                  /* menghilangkan jarak atas */
+    color: #ccc;                                    /* warna teks abu-abu */
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;                             /* teks berada di tengah */
+    padding: 30px;                                  /* jarak bagian dalam */
+    margin-top: 40px;                               /* jarak dari bagian atas */
+    color: #777;                                    /* warna teks */
+    border-top: 1px solid #222;                     /* garis bagian atas */
+}
+
+.footer-content {
+    display: flex;                                  /* isi dibuat satu baris */
+    justify-content: space-between;                 /* memberi jarak kiri dan kanan */
+    flex-wrap: wrap;                                /* turun baris jika tidak cukup */
+    gap: 30px;                                      /* jarak antar bagian */
+    text-align: left;                               /* teks rata kiri */
+    max-width: 900px;                               /* lebar maksimal */
+    margin: 0 auto 20px;                            /* posisi di tengah */
+}
+
+.footer-about h3 {
+    color: white;                                   /* warna judul */
+    font-size: 22px;                                /* ukuran judul */
+    margin-bottom: 10px;                            /* jarak bawah */
+}
+
+.footer-about h3 span {
+    color: #1db954;                                 /* warna FY */
+}
+
+.footer-about p {
+    color: #777;                                    /* warna teks */
+    max-width: 300px;                               /* lebar maksimal teks */
+}
+
+.footer-links h4 {
+    color: white;                                   /* warna judul */
+    margin-bottom: 10px;                            /* jarak bawah */
+}
+
+.footer-links a {
+    display: block;                                /* setiap link menjadi satu baris */
+    color: #777;                                    /* warna link */
+    text-decoration: none;                          /* menghilangkan garis bawah */
+    margin-bottom: 6px;                             /* jarak antar link */
+}
+
+.footer-links a:hover {
+    color: #1db954;                                 /* warna saat cursor diarahkan */
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;                     /* garis atas */
+    padding-top: 15px;                              /* jarak dari garis */
+    text-align: center;                             /* teks di tengah */
+    color: #555;                                    /* warna teks */
+}
+
+
+/* =========================
+   INDEX / HOME
+   ========================= */
+
+#index-container {
+    display: flex;                                  /* card menggunakan flexbox */  
+    justify-content: space-evenly;                  /* memberi jarak antar card */
+    flex-wrap: wrap;                                /* card turun jika tidak cukup */
+}
+
+.index-card {
+    margin: 10px;                                   /* jarak luar */
+    width: 200px;                                   /* lebar card */
+    padding: 10px;                                  /* jarak dalam */
+    box-sizing: border-box;                         /* padding masuk ukuran width */
+    border: 2px solid transparent;                  /* border transparan */
+    border-radius: 10px;                            /* sudut melengkung */
+    background-color: #151515;                      /* warna card */
+    color: white;                                   /* warna teks */
+    position: relative;                             /* acuan posisi favorite */
+    display: flex;                                  /* menggunakan flexbox */
+    flex-direction: column;                         /* isi dari atas ke bawah */
+    transition: transform 0.5s;                    /* gerakan dibuat halus */
+}
+
+.index-card img {
+    border-radius: 8px;                             /* sudut gambar */
+    width: 100%;                                    /* gambar memenuhi card */
+    height: 150px;                                  /* tinggi gambar */
+    object-fit: cover;                              /* gambar memenuhi ukuran */
+    display: block;                                 /* gambar menjadi block */
+}
+
+.index-card:hover {
+    border-color: #1db954;                          /* warna border saat hover */
+    transform: translateY(-7px);                    /* card bergerak ke atas */
+    cursor: pointer;                                /* cursor menjadi tangan */
+}
+
+.index-card h3 {
+    font-size: larger;                              /* ukuran judul */
+    padding: 10px;                                  /* jarak dalam */
+    margin-bottom: 0;                               /* menghilangkan jarak bawah */
+    white-space: nowrap;                            /* teks tidak turun baris */
+    overflow: hidden;                               /* teks yang terlalu panjang disembunyikan */
+    text-overflow: ellipsis;                        /* teks panjang menjadi ... */
+}
+
+.index-card p {
+    margin-top: 0;                                  /* menghilangkan jarak atas */
+    padding: 10px;                                  /* jarak dalam */
+}
+
+.index-favorite {
+    position: absolute;                             /* posisi bebas di dalam card */
+    top: 15px;                                      /* jarak dari atas */
+    right: 15px;                                    /* jarak dari kanan */
+    cursor: pointer;                                /* cursor menjadi tangan */
+    font-size: 30px;                                /* ukuran icon */
+    color: white;                                   /* warna icon */
+    text-shadow: 0 0 4px black;                    /* bayangan icon */
+}
+
+.index-favorite.active {
+    color: red;                                     /* favorite aktif menjadi merah */
+}
+
+.index-hero {
+    background: linear-gradient(135deg, #0d2818, #000000); /* warna gradasi */
+    padding: 80px 90px;                             /* jarak bagian dalam */
+    text-align: center;                             /* teks di tengah */
+}
+
+.index-text {
+    font-size: 20px;                                /* ukuran teks */
+    margin-top: 0;                                  /* menghilangkan jarak atas */
+    color: #ccc;                                    /* warna teks */
+}
+
+.index-button {
+    display: inline-block;                          /* tombol mengikuti isi */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-size: 20px;                                /* ukuran teks */
+    font-weight: bold;                              /* teks tebal */
+    text-decoration: none;                          /* menghilangkan garis bawah */
+    padding: 14px 32px;                             /* ukuran dalam tombol */
+    border-radius: 30px;                            /* membuat tombol bulat */
+    margin-top: 10px;                               /* jarak atas */
+    transition: background 0.3s, transform 0.3s;    /* perubahan dibuat halus */
+}
+
+.index-button:hover {
+    background: #1ed760;                            /* warna saat hover */
+    transform: translateY(-3px);                    /* tombol sedikit naik */
+}
+
+.index-genre {
+    display: flex;                                  /* genre dibuat satu baris */
+    flex-wrap: wrap;                                /* genre turun jika tidak cukup */
+    gap: 12px;                                      /* jarak antar genre */
+    margin-top: 20px;                               /* jarak dari atas */
+}
+
+.index-genre span {
+    background: #181818;                            /* warna background */
+    border: 1px solid #333;                         /* garis tepi */
+    color: white;                                   /* warna teks */
+    padding: 10px 22px;                             /* jarak dalam */
+    border-radius: 20px;                            /* bentuk bulat */
+    font-size: 16px;                                /* ukuran teks */
+}
+
+.index-genre span:hover {
+    border-color: #1db954;                          /* border menjadi hijau */
+    color: #1db954;                                 /* teks menjadi hijau */
+}
+
+.index-cta {
+    background: linear-gradient(135deg, #1db954, #0d2818); /* gradasi */
+    padding: 60px 90px;                             /* jarak bagian dalam */
+    text-align: center;                             /* teks di tengah */
+    border-radius: 20px;                            /* sudut melengkung */
+    margin: 20px 90px;                              /* jarak luar */
+}
+
+
+/* =========================
+   DAFTAR MUSIC
+   ========================= */
+
+#daftar-container {
+    display: flex;                                  /* card menggunakan flexbox */
+    justify-content: space-evenly;                  /* mengatur jarak card */
+    flex-wrap: wrap;                                /* card turun ke baris berikutnya */
+    align-items: flex-start;                        /* card dimulai dari atas */
+}
+
+.daftar-card {
+    margin: 10px;                                   /* jarak luar */
+    width: 200px;                                   /* lebar card */
+    padding: 10px;                                  /* jarak dalam */
+    box-sizing: border-box;                         /* padding masuk ukuran width */
+    border: 2px solid transparent;                  /* border transparan */
+    border-radius: 10px;                            /* sudut melengkung */
+    background-color: #151515;                      /* warna card */
+    color: white;                                   /* warna teks */
+    position: relative;                             /* acuan favorite */
+    display: flex;                                  /* menggunakan flexbox */
+    flex-direction: column;                         /* isi dari atas ke bawah */
+    transition: transform 0.5s;                    /* gerakan halus */
+}
+
+.daftar-card img {
+    border-radius: 8px;                             /* sudut gambar */
+    width: 100%;                                    /* memenuhi card */
+    height: 150px;                                  /* tinggi gambar */
+    object-fit: cover;                              /* gambar memenuhi ukuran */
+    display: block;                                 /* gambar menjadi block */
+}
+
+.daftar-card:hover {
+    border-color: #1db954;                          /* border hijau */
+    transform: translateY(-7px);                    /* card naik */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+.daftar-card h3 {
+    font-size: larger;                              /* ukuran judul */
+    padding: 10px;                                  /* jarak dalam */
+    margin-bottom: 0;                               /* jarak bawah 0 */
+    white-space: nowrap;                            /* tidak turun baris */
+    overflow: hidden;                               /* menyembunyikan teks berlebih */
+    text-overflow: ellipsis;                        /* teks berlebih menjadi ... */
+}
+
+.daftar-card p {
+    margin-top: 0;                                  /* jarak atas 0 */
+    padding: 10px;                                  /* jarak dalam */
+}
+
+.daftar-play {
+    margin: 0 10px 15px;                            /* jarak luar */
+    margin-top: auto;                               /* tombol berada di bagian bawah */
+    padding: 10px;                                  /* jarak dalam */
+    border: none;                                   /* tanpa border */
+    border-radius: 20px;                            /* tombol bulat */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-weight: bold;                              /* teks tebal */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+.daftar-play:hover {
+    background: #1ed760;                            /* warna saat hover */
+}
+
+.daftar-favorite {
+    position: absolute;                             /* posisi bebas dalam card */
+    top: 15px;                                      /* jarak atas */
+    right: 15px;                                    /* jarak kanan */
+    cursor: pointer;                                /* cursor tangan */
+    font-size: 30px;                                /* ukuran icon */
+    color: white;                                   /* warna icon */
+    text-shadow: 0 0 4px black;                    /* bayangan */
+}
+
+.daftar-favorite.active {
+    color: red;                                     /* favorite aktif merah */
+}
+
+#daftar-sort {
+    padding: 10px 15px;                             /* jarak dalam */
+    border-radius: 10px;                            /* sudut melengkung */
+    border: 1px solid #333;                         /* garis tepi */
+    background: #222;                               /* warna background */
+    color: white;                                   /* warna teks */
+    font-size: 15px;                                /* ukuran teks */
+    margin-bottom: 20px;                            /* jarak bawah */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+
+/* =========================
+   SEARCH
+   ========================= */
+
+#search-form {
+    display: flex;                                  /* input dan button satu baris */
+    max-width: 500px;                               /* lebar maksimal */
+    background: #222;                               /* warna background */
+    border-radius: 30px;                            /* bentuk bulat */
+    overflow: hidden;                               /* isi mengikuti sudut */
+    border: 1px solid #333;                         /* garis tepi */
+}
+
+#search-input {
+    flex: 1;                                        /* input mengambil ruang yang tersedia */
+    padding: 15px 20px;                             /* jarak dalam */
+    border: none;                                   /* tanpa border */
+    outline: none;                                  /* menghilangkan garis saat diklik */
+    background: transparent;                        /* background transparan */
+    color: white;                                   /* warna teks */
+    font-size: 15px;                                /* ukuran teks */
+}
+
+#search-button {
+    padding: 0 25px;                                /* jarak kiri dan kanan */
+    border: none;                                   /* tanpa border */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-weight: bold;                              /* teks tebal */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+#search-button:hover {
+    background: #1ed760;                            /* warna saat hover */
+}
+
+#search-container {
+    display: flex;                                  /* card menggunakan flexbox */
+    justify-content: space-evenly;                  /* mengatur jarak card */
+    flex-wrap: wrap;                                /* card turun jika tidak cukup */
+    align-items: flex-start;                        /* mulai dari atas */
+    margin-top: 20px;                               /* jarak dari form */
+}
+
+.search-card {
+    margin: 10px;                                   /* jarak luar */
+    width: 200px;                                   /* lebar card */
+    padding: 10px;                                  /* jarak dalam */
+    box-sizing: border-box;                         /* padding masuk width */
+    border: 2px solid transparent;                  /* border transparan */
+    border-radius: 10px;                            /* sudut melengkung */
+    background-color: #151515;                      /* warna card */
+    color: white;                                   /* warna teks */
+    position: relative;                             /* acuan favorite */
+    display: flex;                                  /* menggunakan flexbox */
+    flex-direction: column;                         /* isi dari atas ke bawah */
+    transition: transform 0.5s;                    /* gerakan halus */
+}
+
+.search-card img {
+    border-radius: 8px;                             /* sudut gambar */
+    width: 100%;                                    /* memenuhi card */
+    height: 150px;                                  /* tinggi gambar */
+    object-fit: cover;                              /* gambar memenuhi ukuran */
+    display: block;                                 /* menjadi block */
+}
+
+.search-card:hover {
+    border-color: #1db954;                          /* border hijau */
+    transform: translateY(-7px);                    /* card naik */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+.search-card h3 {
+    font-size: larger;                              /* ukuran judul */
+    padding: 10px;                                  /* jarak dalam */
+    margin-bottom: 0;                               /* jarak bawah */
+    white-space: nowrap;                            /* tidak turun baris */
+    overflow: hidden;                               /* menyembunyikan teks */
+    text-overflow: ellipsis;                        /* teks menjadi ... */
+}
+
+.search-card p {
+    margin-top: 0;                                  /* jarak atas 0 */
+    padding: 10px;                                  /* jarak dalam */
+}
+
+.search-play {
+    margin: 0 10px 15px;                            /* jarak luar */
+    margin-top: auto;                               /* tombol di bawah */
+    padding: 10px;                                  /* jarak dalam */
+    border: none;                                   /* tanpa border */
+    border-radius: 20px;                            /* tombol bulat */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-weight: bold;                              /* teks tebal */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+.search-play:hover {
+    background: #1ed760;                            /* warna hover */
+}
+
+.search-favorite {
+    position: absolute;                             /* posisi bebas */
+    top: 15px;                                      /* jarak atas */
+    right: 15px;                                    /* jarak kanan */
+    cursor: pointer;                                /* cursor tangan */
+    font-size: 30px;                                /* ukuran icon */
+    color: white;                                   /* warna icon */
+    text-shadow: 0 0 4px black;                    /* bayangan */
+}
+
+.search-favorite.active {
+    color: red;                                     /* favorite aktif merah */
+}
+
+.search-empty {
+    color: #888;                                    /* warna pesan */
+    font-size: 18px;                                /* ukuran teks */
+    text-align: center;                             /* teks di tengah */
+    width: 100%;                                    /* memenuhi container */
+    padding: 60px 20px;                             /* jarak dalam */
+}
+
+
+/* =========================
+   FAVORITE
+   ========================= */
+
+#favorite-container {
+    display: flex;                                  /* card menggunakan flexbox */
+    justify-content: space-evenly;                  /* mengatur jarak card */
+    flex-wrap: wrap;                                /* card turun jika tidak cukup */
+    align-items: flex-start;                        /* mulai dari atas */
+}
+
+.favorite-card {
+    margin: 10px;                                   /* jarak luar */
+    width: 200px;                                   /* lebar card */
+    padding: 10px;                                  /* jarak dalam */
+    box-sizing: border-box;                         /* padding masuk width */
+    border: 2px solid transparent;                  /* border transparan */
+    border-radius: 10px;                            /* sudut melengkung */
+    background-color: #151515;                      /* warna card */
+    color: white;                                   /* warna teks */
+    display: flex;                                  /* menggunakan flexbox */
+    flex-direction: column;                         /* isi dari atas ke bawah */
+}
+
+.favorite-card img {
+    border-radius: 8px;                             /* sudut gambar */
+    width: 100%;                                    /* memenuhi card */
+    height: 150px;                                  /* tinggi gambar */
+    object-fit: cover;                              /* gambar memenuhi ukuran */
+    display: block;                                 /* menjadi block */
+}
+
+.favorite-card h3 {
+    font-size: larger;                              /* ukuran judul */
+    padding: 10px;                                  /* jarak dalam */
+    margin-bottom: 0;                               /* jarak bawah */
+    white-space: nowrap;                            /* tidak turun baris */
+    overflow: hidden;                               /* menyembunyikan teks */
+    text-overflow: ellipsis;                        /* teks menjadi ... */
+}
+
+.favorite-card p {
+    margin-top: 0;                                  /* jarak atas 0 */
+    padding: 10px;                                  /* jarak dalam */
+}
+
+.favorite-button {
+    margin: 10px;                                   /* jarak luar */
+    padding: 10px;                                  /* jarak dalam */
+    border: none;                                   /* tanpa border */
+    border-radius: 20px;                            /* tombol bulat */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-weight: bold;                              /* teks tebal */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+.favorite-button:hover {
+    background: #1ed760;                            /* warna hover */
+}
+
+.favorite-empty {
+    color: #888;                                    /* warna pesan */
+    font-size: 18px;                                /* ukuran teks */
+    text-align: center;                             /* teks di tengah */
+    width: 100%;                                    /* memenuhi container */
+    padding: 60px 20px;                             /* jarak dalam */
+}
+
+
+/* =========================
+   FEEDBACK
+   ========================= */
+
+#feedback-form {
+    display: flex;                                  /* input disusun flexbox */
+    flex-direction: column;                         /* input dari atas ke bawah */
+    max-width: 500px;                               /* lebar maksimal */
+    gap: 12px;                                      /* jarak antar input */
+    margin-bottom: 30px;                            /* jarak bawah */
+}
+
+#feedback-form input,
+#feedback-form textarea {
+    padding: 12px 15px;                             /* jarak dalam */
+    border: 1px solid #333;                         /* garis tepi */
+    border-radius: 10px;                            /* sudut melengkung */
+    background: #222;                               /* warna background */
+    color: white;                                   /* warna teks */
+    font-size: 15px;                                /* ukuran teks */
+    font-family: inherit;                           /* mengikuti font parent */
+    outline: none;                                  /* menghilangkan outline */
+    resize: vertical;                               /* textarea hanya bisa diperbesar vertikal */
+}
+
+#feedback-form button {
+    padding: 12px;                                  /* jarak dalam */
+    border: none;                                   /* tanpa border */
+    border-radius: 20px;                            /* tombol bulat */
+    background: #1db954;                            /* warna tombol */
+    color: black;                                   /* warna teks */
+    font-weight: bold;                              /* teks tebal */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+#feedback-form button:hover {
+    background: #1ed760;                            /* warna hover */
+}
+
+.feedback-success {
+    color: #1db954;                                 /* warna pesan berhasil */
+    font-weight: bold;                              /* teks tebal */
+}
+
+#feedback-list {
+    display: flex;                                  /* feedback menggunakan flexbox */
+    flex-direction: column;                         /* feedback dari atas ke bawah */
+    gap: 15px;                                      /* jarak antar feedback */
+}
+
+.feedback-card {
+    width: 100%;                                    /* memenuhi container */
+    max-width: 500px;                               /* lebar maksimal */
+    padding: 10px;                                  /* jarak dalam */
+    box-sizing: border-box;                         /* padding masuk width */
+    background: #151515;                            /* warna card */
+    border-radius: 10px;                            /* sudut melengkung */
+}
+
+
+/* =========================
+   PLAYER
+   ========================= */
+
+#player-modal {
+    display: none;                                  /* modal disembunyikan */
+    position: fixed;                                /* tetap di layar */
+    inset: 0;                                       /* memenuhi seluruh layar */
+    background: rgba(0, 0, 0, 0.85);                /* background transparan */
+    align-items: center;                            /* isi di tengah vertikal */
+    justify-content: center;                        /* isi di tengah horizontal */
+    z-index: 200;                                   /* berada di atas elemen lain */
+}
+
+.player-box {
+    width: 100%;                                    /* memenuhi ruang */
+    max-width: 700px;                               /* lebar maksimal */
+    background: #181818;                            /* warna player */
+    color: white;                                   /* warna teks */
+    padding: 20px;                                  /* jarak dalam */
+    border-radius: 15px;                            /* sudut melengkung */
+    position: relative;                             /* acuan tombol close */
+}
+
+#player-close {
+    position: absolute;                             /* posisi bebas */
+    right: 15px;                                    /* jarak kanan */
+    top: 15px;                                      /* jarak atas */
+    background: transparent;                        /* background transparan */
+    border: none;                                   /* tanpa border */
+    color: #aaa;                                    /* warna tombol */
+    font-size: 20px;                                /* ukuran tombol */
+    cursor: pointer;                                /* cursor tangan */
+}
+
+#player-close:hover {
+    color: white;                                   /* warna saat hover */
+}
+
+#player-title {
+    margin-top: 0;                                  /* menghilangkan jarak atas */
+}
+
+#player {
+    width: 100%;                                    /* player memenuhi box */
+    height: 450px;                                  /* tinggi player */
+    border: none;                                   /* tanpa border */
+    border-radius: 10px;                            /* sudut melengkung */
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tampilan ketika layar lebih kecil */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;                    /* header menjadi atas-bawah */
+        padding: 10px;                              /* jarak dalam */
+    }
+
+    header h1 {
+        padding: 0;                                 /* menghilangkan padding */
+        margin: 10px 0;                              /* jarak atas dan bawah */
+    }
+
+    nav {
+        display: flex;                              /* menu menggunakan flexbox */
+        flex-wrap: wrap;                            /* menu bisa turun */
+        justify-content: center;                    /* menu di tengah */
+    }
+
+    nav a {
+        margin: 8px;                                /* jarak antar menu */
+        font-size: medium;                          /* ukuran menu */
+    }
+
+    section {
+        padding: 20px;                              /* mengurangi jarak section */
+    }
+
+    section h2 {
+        font-size: 35px;                            /* mengecilkan judul */
+    }
+
+    .index-hero {
+        padding: 60px 20px;                         /* mengurangi padding */
+    }
+
+    .index-cta {
+        margin: 20px;                               /* mengurangi margin */
+        padding: 40px 20px;                         /* mengurangi padding */
+    }
+
+    #search-form {
+        width: 100%;                                /* form memenuhi layar */
+    }
+
+    #player {
+        height: 300px;                              /* player lebih pendek */
+    }
+
+    .player-box {
+        width: 85%;                                 /* box lebih kecil */
+    }
+}

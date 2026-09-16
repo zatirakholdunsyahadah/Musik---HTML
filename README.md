@@ -1,29 +1,29 @@
-Mini Projek Kelola Penjualan Pakaian (C++)
+ZATIFY — Find Your Vibe, Play Your Music 🎧
 
-Aplikasi berbasis console (CLI) yang dibuat menggunakan bahasa pemrograman C++ untuk membantu mengelola sistem penjualan pakaian pada toko Nabonek Fashion. Aplikasi ini menyediakan fitur untuk menambahkan data pakaian baru, melakukan transaksi pembelian dengan perhitungan diskon, mengelola pembayaran tunai, serta melihat rekapitulasi laporan pendapatan penjualan.
+ZATIFY atau “Find Your Vibe, Play Your Music” merupakan website musik yang dibuat untuk membantu pengguna mencari, menemukan, dan mendengarkan berbagai lagu secara lebih mudah dan interaktif. Website ini dikembangkan menggunakan HTML, CSS, dan JavaScript dengan memanfaatkan API untuk mengambil dan menampilkan data musik secara dinamis. ZATIFY memiliki tampilan yang dibuat dengan konsep modern dan menarik sehingga pengguna dapat menjelajahi berbagai musik sesuai dengan selera mereka. Website ini menyediakan beberapa halaman utama seperti Home, Music, Search, Favorite, dan Feedback. Pengguna dapat melihat daftar musik, mencari lagu berdasarkan judul atau artis, memutar lagu, serta menyimpan lagu yang disukai ke dalam daftar favorit.
 
 Fitur Utama
 Menu Utama
-1. Tambah Pakaian Baru: Memungkinkan admin untuk menambahkan data pakaian baru berupa nama pakaian, harga, stok awal, dan kategori pakaian seperti Baju, Celana, Jaket, atau Kaos.
-2. Menu Pembelian: Digunakan untuk melakukan proses transaksi pembelian pakaian.
-Menampilkan daftar kategori dan item pakaian beserta harga dan stok yang tersedia.
-Sistem Diskon Berjenjang: Perhitungan potongan harga berdasarkan jumlah pembelian, yaitu Qty ≥ 3 mendapatkan diskon 50%, Qty ≥ 5 mendapatkan diskon 70%, dan Qty ≥ 10 mendapatkan diskon 80%.
-Validasi Pembayaran Tunai: Sistem memeriksa kecukupan uang pembayaran. Jika uang yang diberikan kurang, pengguna diminta melakukan pembayaran kembali sampai jumlahnya mencukupi.
-Perhitungan Kembalian: Sistem secara otomatis menghitung jumlah uang kembalian setelah pembayaran mencukupi.
-Struk Pembelian: Menampilkan rincian transaksi setelah proses pembayaran berhasil.
-3. Laporan Penjualan: Menampilkan riwayat transaksi yang telah berhasil dilakukan beserta total pendapatan atau grand total penjualan.
+1. Home: Menampilkan halaman utama ZATIFY yang berisi informasi dan tampilan awal website musik serta mengarahkan pengguna ke berbagai fitur yang tersedia.
+2. Music: Menampilkan daftar musik yang tersedia lengkap dengan informasi seperti judul lagu, nama artis, album, dan fitur untuk memutar musik.
+3. Search: Memungkinkan pengguna mencari musik berdasarkan judul lagu atau nama artis sehingga pengguna dapat menemukan lagu yang diinginkan dengan lebih cepat.
+4. Favorite: Digunakan untuk menyimpan dan menampilkan daftar lagu yang disukai oleh pengguna. Data lagu favorit disimpan menggunakan localStorage sehingga tetap tersedia pada browser.
+5. Feedback: Menyediakan halaman bagi pengguna untuk memberikan pendapat, saran, maupun masukan mengenai website ZATIFY.
+6. Play Music: Pengguna dapat menekan tombol play pada lagu yang dipilih untuk mulai mendengarkan musik melalui fitur pemutar yang tersedia.
+7. API Music: Data musik diperoleh dari API sehingga daftar musik dapat ditampilkan secara dinamis tanpa harus menuliskan seluruh data lagu secara manual di dalam HTML.
+8. Local Storage: Digunakan untuk menyimpan data musik yang ditambahkan ke dalam daftar favorit pada browser pengguna.
 Alur Sistem
-Program Dimulai: Pengguna menjalankan aplikasi melalui console dan sistem menampilkan menu utama.
-Memilih Menu: Pengguna memilih proses yang ingin dilakukan, yaitu menambah pakaian, melakukan pembelian, atau melihat laporan penjualan.
-Tambah Pakaian: Jika memilih menu tambah pakaian, admin memasukkan nama pakaian, kategori, harga, dan jumlah stok. Data kemudian disimpan ke dalam sistem dan dapat digunakan untuk transaksi.
-Memilih Menu Pembelian: Pengguna memilih kategori pakaian kemudian memilih item yang ingin dibeli berdasarkan daftar pakaian yang tersedia.
-Memasukkan Jumlah Pembelian: Pengguna menentukan jumlah pakaian yang akan dibeli. Sistem melakukan pengecekan terhadap ketersediaan stok.
-Perhitungan Harga dan Diskon: Sistem menghitung total harga berdasarkan jumlah barang yang dibeli. Jika jumlah pembelian memenuhi ketentuan, sistem memberikan diskon sesuai dengan tingkatan yang telah ditentukan.
-Pembayaran Tunai: Pengguna memasukkan jumlah uang yang digunakan untuk membayar. Sistem melakukan validasi apakah uang tersebut mencukupi total pembayaran.
-Validasi Pembayaran: Jika uang kurang, sistem meminta pengguna memasukkan pembayaran kembali. Jika uang mencukupi, sistem melanjutkan ke proses berikutnya.
-Menghitung Kembalian: Apabila terdapat kelebihan pembayaran, sistem menghitung dan menampilkan jumlah uang kembalian.
-Memperbarui Stok: Setelah transaksi berhasil, jumlah stok pakaian akan dikurangi sesuai dengan jumlah barang yang dibeli.
-Mencetak Struk: Sistem menampilkan rincian transaksi yang berisi informasi pakaian, jumlah pembelian, harga, diskon, total pembayaran, uang pembayaran, dan kembalian.
-Menyimpan Transaksi: Data transaksi yang berhasil akan dicatat sehingga dapat digunakan pada menu laporan penjualan.
-Laporan Penjualan: Admin dapat memilih menu laporan untuk melihat riwayat transaksi serta mengetahui total pendapatan penjualan.
-Program Selesai: Setelah selesai menggunakan sistem, pengguna dapat memilih keluar dari aplikasi.
+Website Dimulai: Pengguna membuka website ZATIFY dan sistem menampilkan halaman Home sebagai halaman awal.
+Menampilkan Data Musik: Website mengambil data musik dari API menggunakan JavaScript kemudian mengolah data tersebut dalam format JSON.
+Menampilkan Daftar Musik: Data yang berhasil diperoleh dari API ditampilkan ke dalam halaman Music dalam bentuk daftar atau card musik.
+Memilih Musik: Pengguna dapat memilih salah satu lagu yang tersedia untuk melihat informasi musik dan menggunakan fitur play.
+Memutar Musik: Pengguna menekan tombol Play pada lagu yang dipilih sehingga musik dapat mulai diputar melalui fitur yang tersedia pada website.
+Mencari Musik: Jika pengguna ingin menemukan lagu tertentu, pengguna dapat masuk ke menu Search kemudian memasukkan judul lagu atau nama artis.
+Proses Pencarian: JavaScript akan memproses kata kunci pencarian dan melakukan penyaringan terhadap data musik yang tersedia.
+Menampilkan Hasil: Sistem menampilkan lagu yang sesuai dengan kata kunci yang dimasukkan oleh pengguna.
+Menambahkan Favorite: Pengguna dapat memilih lagu yang disukai dan menambahkannya ke daftar Favorite.
+Menyimpan Favorite: Data lagu yang dipilih disimpan menggunakan localStorage pada browser sehingga data favorit dapat digunakan kembali ketika pengguna membuka halaman Favorite.
+Menampilkan Favorite: Ketika pengguna membuka menu Favorite, sistem mengambil data dari localStorage kemudian menampilkan kembali lagu-lagu yang telah disimpan.
+Memberikan Feedback: Pengguna dapat membuka menu Feedback untuk memberikan saran, pendapat, atau masukan mengenai website.
+Interaksi Berlangsung: Seluruh interaksi seperti pencarian, pemutaran musik, penambahan favorite, dan perpindahan halaman diproses menggunakan JavaScript dan DOM manipulation.
+Sistem Selesai: Pengguna dapat berpi
